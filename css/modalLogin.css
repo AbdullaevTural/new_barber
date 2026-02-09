@@ -1,0 +1,219 @@
+body:has(.modal__show)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000a1;
+  z-index: 1;
+}
+
+.modal__error {
+  animation: shake 0.4s;
+}
+.modal__error {
+  animation-name: shake;
+  animation-duration: 0.4s;
+}
+
+.modal {
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 25px 50px 25px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.modal-form {
+  display: none;
+  padding: 60px 25px 50px 25px;
+  text-align: center;
+  color: #000;
+  background-color: #f8f5f2;
+  box-shadow: 0 30px 50px rgba(0, 1, 1, 0.35);
+  width: 100%;
+  max-width: 460px;
+}
+
+.modal__show {
+  display: block;
+}
+
+.modal-form__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.modal-form__description {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.login-form__date {
+  display: block;
+  position: relative;
+  width: auto;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.user__date {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px 12px 20px;
+  font-size: 18px;
+  line-height: 24px;
+  border: 1px solid #e5ddd5;
+}
+
+.user__icon {
+  background-repeat: no-repeat;
+  background-position: 92% 50%;
+}
+
+.user__icon--login {
+  background-image: url("/img/user.svg");
+}
+
+.user__icon--password {
+  background-image: url("/img/password.svg");
+}
+
+.login-form__check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form__checkbox {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  padding-left: 45px;
+  margin-bottom: 28px;
+  margin-top: 28px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.checkbox-indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #e5ddd5;
+}
+
+.checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 8px;
+  width: 18px;
+  height: 8px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+.login-form__checkbox .visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.login-form__checkbox input:checked + .checkbox-indicator::after {
+  opacity: 1;
+}
+
+.login-form__forgot {
+  text-align: right;
+  color: #000;
+}
+
+.login-form__submit {
+  width: calc(50% - 10px);
+  display: flex;
+  color: #fff;
+  background-color: #826550;
+  justify-content: center;
+  align-items: center;
+}
+.modal-form__close {
+  position: absolute;
+  bottom: 50px;
+  width: calc(50% - 35px);
+  padding: 12px 30px;
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #e5ddd5;
+  cursor: pointer;
+}
+
+.login-form__checkbox input:active + span::before {
+  background-color: #d5c9bd;
+}
+
+.login-form__checkbox input:hover + span::before {
+  border-color: #d5c9bd;
+}
+
+@media (min-width: 768px) {
+  .modal-form__close {
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .modal-form__close::after,
+  .modal-form__close::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+  }
+
+  .modal-form__close::before {
+    transform: translate(-10%, 80%) rotate(45deg);
+  }
+
+  .modal-form__close::after {
+    transform: translate(-10%, 80%) rotate(-45deg);
+  }
+
+  .login-form__submit {
+    width: 100%;
+  }
+}

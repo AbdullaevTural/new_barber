@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 50 60">
+  <defs>
+    <pattern id="image-bg" width="50" height="50" patternUnits="userSpaceOnUse">
+       <image width="50" height="50" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAAALRJREFUaEPtmjEOAjEQxHI1Bf9/Hj8A6ehZ+IJdcJFP2nJGWTvX5VhrPWbuM1f+Xsec/py5XXmLOfv7u8hzFyMt8kfX8fePZCQjPoGuls+UNWaE8fPTGfGZssaMMH5+OiM+U9aYEcbPT2fEZ8oaM8L4+emM+ExZY0YYPz+dEZ8pa8wI4+enM+IzZY0ZYfz8dEZ8pqwxI4yfn86Iz5Q1ZoTx89MZ8Zmyxowwfn56r2dOWzw8+wC9lGD9hi1ycAAAAABJRU5ErkJggg=="/>
+    </pattern>
+  </defs>
+
+  <rect width="50" height="50" fill="#000000" />
+
+  <path d="M0,49.5 L50,49.5 L25,60 Z" fill="#000000" />
+</svg>
