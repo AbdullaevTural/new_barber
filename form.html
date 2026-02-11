@@ -53,7 +53,7 @@
     <main class="form-page">
       <article class="form-page__article">
         <h1 class="form-main__title">Запись на стрижку</h1>
-        <form action="https://echo.htmlacademy.ru/" class="form" method="post">
+        <form id="form-page__order" action="https://echo.htmlacademy.ru/" class="form" method="post">
           <div class="form__wrapper">
             <div class="form__row">
               <div class="form__field form__field--family">
@@ -272,9 +272,19 @@
       </form>
       <button class="modal-form__close" type="button">Закрыть</button>
     </section>
+    <section class="modal modal-form modal-form--success">
+      <h2 class="modal-form__title">Это успех!</h2>
+      <p class="modal-form__text">
+        Ваша заявка отправлена.
+      </p>
+      <p class="modal-form__text">
+        Ожидайте, мы свяжемся с вами как только будет минутка. </p>
+      <button class="modal-form__close button" type="button">Закрыть окно</button>
+    </section>
     <script src="/scripts/navMain.js"></script>
     <script src="/scripts/slider.js"></script>
     <script src="/scripts/headerHeight.js"></script>
     <script src="/scripts/modalLogin.js"></script>
+    <script src="/scripts/modalFormSucces.js"></script>
   </body>
 </html>

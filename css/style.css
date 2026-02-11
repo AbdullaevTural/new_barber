@@ -265,7 +265,7 @@ img {
 @media (min-width: 768px) {
   .main-nav {
     position: fixed;
-    z-index: 1000;
+    z-index: 2;
     width: 100%;
     margin: 0;
     background-color: #000000;
@@ -306,7 +306,7 @@ img {
     top: 0;
     right: 0;
     left: 70px;
-    z-index: 10;
+    z-index: 2;
     min-height: 80vh;
     background-color: #6a4d38;
   }
@@ -1683,8 +1683,12 @@ textarea.form__input {
   transform: translateY(-80%) rotate(-45deg);
 }
 
-.additional-services__label:has(input:checked)::after {
+.additional-services__label:has(.additional-services__checkbox:checked)::after {
   opacity: 1;
+}
+
+.additional-services__label:has(.additional-services__checkbox:active)::before {
+  background-color: #d5c9bd;
 }
 
 @media (min-width: 768px) {
